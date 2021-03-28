@@ -1,3 +1,11 @@
+<?php
+include '../setting/config.php';
+$settingQuery = $db->prepare("SELECT * FROM setting WHERE setting_id=:id");
+$settingQuery->execute(array(
+  'id' => 0
+));
+$settingTake = $settingQuery->fetch(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,7 +72,7 @@
                   <li><a href="index.php"><i class="fa fa-home"></i> Ana Səhifə </a></li>
                   <li><a><i class="fa fa-cogs"></i> Parametrlər <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Ümumi Parametrlər</a></li>
+                      <li><a href="general-settings.php">Ümumi Parametrlər</a></li>
                     </ul>
                   </li>
 
