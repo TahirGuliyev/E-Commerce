@@ -72,7 +72,8 @@ $settingTake = $settingQuery->fetch(PDO::FETCH_ASSOC);
                   <li><a href="index.php"><i class="fa fa-home"></i> Ana Səhifə </a></li>
                   <li><a><i class="fa fa-cogs"></i> Parametrlər <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general-settings.php">Ümumi Parametrlər</a></li>
+                      <li><a href="general-settings.php">Sayt Parametrləri</a></li>
+                      <li><a href="contact-settings.php">Əlaqə Parametrləri</a></li>
                     </ul>
                   </li>
 
