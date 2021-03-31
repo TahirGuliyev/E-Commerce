@@ -8,7 +8,7 @@ include 'header.php';
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Sayt Parametrləri <?php  
+                    <h2>Sosial Şəbəkə Parametrləri <?php  
                     if($_GET['status']=="ok"){ ?>
                     <b style="color:green;" >Əməliyyat uğurla yerinə yetirildi!</b>
                     <?php } elseif($_GET['status']=="bad"){ ?>
@@ -31,27 +31,27 @@ include 'header.php';
                     <form action="../setting/process.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Başlığı </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Facebook </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_title" value="<?php echo $settingTake['setting_title'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_facebook" value="<?php echo $settingTake['setting_facebook'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Açıqlaması </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Twitter </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_description" value="<?php echo $settingTake['setting_description'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_twitter" value="<?php echo $settingTake['setting_twitter'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Açar Sözləri </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Instagram </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_keywords" value="<?php echo $settingTake['setting_keywords'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_instagram" value="<?php echo $settingTake['setting_instagram'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Müəllif </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Youtube </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_author" value="<?php echo $settingTake['setting_author'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_youtube" value="<?php echo $settingTake['setting_youtube'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       
@@ -60,7 +60,7 @@ include 'header.php';
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div align="right" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button type="submit" name="generalSettingSave" class="btn btn-success">Dəyişdir</button>
+                          <button type="submit" name="socialSettingSave" class="btn btn-success">Dəyişdir</button>
                         </div>
                       </div>
 

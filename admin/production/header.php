@@ -74,6 +74,9 @@ $settingTake = $settingQuery->fetch(PDO::FETCH_ASSOC);
                     <ul class="nav child_menu">
                       <li><a href="general-settings.php">Sayt Parametrləri</a></li>
                       <li><a href="contact-settings.php">Əlaqə Parametrləri</a></li>
+                      <li><a href="api-settings.php">API Parametrləri</a></li>
+                      <li><a href="social-settings.php">Sosial Şəbəkə Parametrləri</a></li>
+                      <li><a href="mail-settings.php">Mail Parametrləri</a></li>
                     </ul>
                   </li>
 

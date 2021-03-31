@@ -8,7 +8,7 @@ include 'header.php';
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Sayt Parametrləri <?php  
+                    <h2>API Parametrləri <?php  
                     if($_GET['status']=="ok"){ ?>
                     <b style="color:green;" >Əməliyyat uğurla yerinə yetirildi!</b>
                     <?php } elseif($_GET['status']=="bad"){ ?>
@@ -19,6 +19,7 @@ include 'header.php';
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
+                      
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                     </ul>
@@ -31,27 +32,21 @@ include 'header.php';
                     <form action="../setting/process.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Başlığı </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Xəritə </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_title" value="<?php echo $settingTake['setting_title'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_map" value="<?php echo $settingTake['setting_map'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Açıqlaması </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Analystic Kodu </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_description" value="<?php echo $settingTake['setting_description'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_analystic" value="<?php echo $settingTake['setting_analystic'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Açar Sözləri </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Zopim </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_keywords" value="<?php echo $settingTake['setting_keywords'] ?>" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Müəllif </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" name="setting_author" value="<?php echo $settingTake['setting_author'] ?>" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" name="setting_zopim" value="<?php echo $settingTake['setting_zopim'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       
@@ -60,7 +55,7 @@ include 'header.php';
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div align="right" class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button type="submit" name="generalSettingSave" class="btn btn-success">Dəyişdir</button>
+                          <button type="submit" name="apiSettingSave" class="btn btn-success">Dəyişdir</button>
                         </div>
                       </div>
 
