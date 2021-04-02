@@ -14,6 +14,7 @@ $settingTake = $settingQuery->fetch(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 
     <title>DataTables | Gentelella</title>
 
@@ -79,6 +80,7 @@ $settingTake = $settingQuery->fetch(PDO::FETCH_ASSOC);
                       <li><a href="mail-settings.php">Mail Parametrləri</a></li>
                     </ul>
                   </li>
+                  <li><a href="about.php"><i class="fa fa-info"></i> Haqqımızda </a></li>
 
                 </ul>
               </div>

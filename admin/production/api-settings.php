@@ -32,19 +32,19 @@ include 'header.php';
                     <form action="../setting/process.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Xəritə </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Xəritə </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_map" value="<?php echo $settingTake['setting_map'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Analystic Kodu </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Analystic Kodu </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_analystic" value="<?php echo $settingTake['setting_analystic'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Zopim </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Zopim </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_zopim" value="<?php echo $settingTake['setting_zopim'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>

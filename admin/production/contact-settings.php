@@ -31,37 +31,37 @@ include 'header.php';
                     <form action="../setting/process.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Telefon Nömrəsi (Şəhər) </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Telefon Nömrəsi (Şəhər) </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_tel" value="<?php echo $settingTake['setting_tel'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Telefon Nömrəsi (Mobil) </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Telefon Nömrəsi (Mobil) </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_gsm" value="<?php echo $settingTake['setting_gsm'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Faks </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Faks </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_fax" value="<?php echo $settingTake['setting_fax'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">E-Mail Ünvanı </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >E-Mail Ünvanı </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="email" id="first-name" name="setting_mail" value="<?php echo $settingTake['setting_mail'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Ünvan </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Ünvan </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_address" value="<?php echo $settingTake['setting_address'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">İş Saatları </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >İş Saatları </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_whour" value="<?php echo $settingTake['setting_whour'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>

@@ -108,4 +108,27 @@ if(isset($_POST['mailSettingSave'])){
     }
 }
 
+//About Page Update
+if(isset($_POST['aboutSave'])){
+    $settingSave = $db->prepare("UPDATE about SET
+    about_title = :about_title,
+    about_content = :about_content,
+    about_video = :about_video,
+    about_vision = :about_vision,
+    about_mission = :about_mission
+    WHERE about_id = 0");
+    $update = $settingSave->execute(array(
+        about_title => $_POST['about_title'],
+        about_content => $_POST['about_content'],
+        about_video => $_POST['about_video'],
+        about_vision => $_POST['about_vision'],
+        about_mission => $_POST['about_mission']
+    ));
+    if($update){
+        header("Location:../production/about.php?status=ok");
+    } else {
+        header("Location:../production/about.php?status=bad");
+    }
+}
+
 ?>

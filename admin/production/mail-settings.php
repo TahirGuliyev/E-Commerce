@@ -31,25 +31,25 @@ include 'header.php';
                     <form action="../setting/process.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">SMTP HOST </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">SMTP HOST </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_smtphost" value="<?php echo $settingTake['setting_smtphost'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">SMTP User </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">SMTP User </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_smtpuser" value="<?php echo $settingTake['setting_smtpuser'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">SMTP Password </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">SMTP Password </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_smtppassword" value="<?php echo $settingTake['setting_smtppassword'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">SMTP Port </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">SMTP Port </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_smtpport" value="<?php echo $settingTake['setting_smtpport'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>

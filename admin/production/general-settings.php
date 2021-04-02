@@ -31,25 +31,25 @@ include 'header.php';
                     <form action="../setting/process.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Başlığı </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Saytın Başlığı </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_title" value="<?php echo $settingTake['setting_title'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Açıqlaması </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Saytın Açıqlaması </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_description" value="<?php echo $settingTake['setting_description'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Saytın Açar Sözləri </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Saytın Açar Sözləri </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_keywords" value="<?php echo $settingTake['setting_keywords'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Müəllif </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Müəllif </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" name="setting_author" value="<?php echo $settingTake['setting_author'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
