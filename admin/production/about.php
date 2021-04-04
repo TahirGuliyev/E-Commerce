@@ -6,7 +6,7 @@ $aboutQuery->execute(array(
 ));
 $aboutTake = $aboutQuery->fetch(PDO::FETCH_ASSOC);
 ?>
-<head><script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script></head>
+
         <div class="right_col" role="main">
           <div class="">
             <div class="clearfix"></div>

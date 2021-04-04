@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 include 'config.php';
 
 //Site Settings Update
@@ -128,6 +130,26 @@ if(isset($_POST['aboutSave'])){
         header("Location:../production/about.php?status=ok");
     } else {
         header("Location:../production/about.php?status=bad");
+    }
+}
+// Admin Login
+if(isset($_POST['adminEnter'])){
+    $user_mail = $_POST['user_mail'];
+    $user_password = md5($_POST['user_password']);
+    $userQuery = $db->prepare("SELECT * FROM user WHERE user_mail = :user_mail AND user_password = :user_password AND user_authority = :user_authority");
+    $userQuery->execute(array(
+        'user_mail' => $user_mail,
+        'user_password' => $user_password,
+        'user_authority' => 5
+    ));
+    $count = $userQuery->rowCount();
+    if($count == 1){
+        $_SESSION['user_mail'] = $user_mail;
+        header("Location:../production/index.php");
+        exit;
+    } else {
+        header("Location:../production/login.php?status=bad");
+        exit;
     }
 }
 
