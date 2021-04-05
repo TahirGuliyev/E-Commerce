@@ -153,4 +153,58 @@ if(isset($_POST['adminEnter'])){
     }
 }
 
+//User Update
+if (isset($_POST['userUpdate'])) {
+
+	$user_id=$_POST['user_id'];
+
+	$settingSave=$db->prepare("UPDATE user SET
+		user_finkod=:user_finkod,
+		user_adsoyad=:user_adsoyad,
+		user_status=:user_status
+		WHERE user_id={$_POST['user_id']}");
+
+	$update=$settingSave->execute(array(
+		'user_finkod' => $_POST['user_finkod'],
+		'user_adsoyad' => $_POST['user_adsoyad'],
+		'user_status' => $_POST['user_status']
+		));
+
+
+	if ($update) {
+
+		Header("Location:../production/user-update.php?user_id=$user_id&status=ok");
+
+	} else {
+
+		Header("Location:../production/user-update.php?user_id=$user_id&status=bad");
+	}
+
+}
+
+//User Delete
+
+if ($_GET['userDelete']=="ok") {
+
+	$delete=$db->prepare("DELETE from user where user_id=:id");
+	$control=$delete->execute(array(
+		'id' => $_GET['user_id']
+		));
+
+
+	if ($control) {
+
+
+		header("location:../production/user.php?delete=ok");
+
+
+	} else {
+
+		header("location:../production/user.php?delete=bad");
+
+	}
+
+
+}
+
 ?>
