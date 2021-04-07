@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 include 'config.php';
+include '../production/function.php';
 
 //Site Settings Update
 if(isset($_POST['generalSettingSave'])){
@@ -204,6 +205,105 @@ if ($_GET['userDelete']=="ok") {
 
 	}
 
+
+}
+
+//Menu Update
+if (isset($_POST['menuUpdate'])) {
+
+	$menu_id=$_POST['menu_id'];
+
+	$menu_seourl=seo($_POST['menu_name']);
+
+	
+	$settingSave=$db->prepare("UPDATE menu SET
+		menu_name=:menu_name,
+		menu_detail=:menu_detail,
+		menu_url=:menu_url,
+		menu_sira=:menu_sira,
+		menu_seourl=:menu_seourl,
+		menu_status=:menu_status
+		WHERE menu_id={$_POST['menu_id']}");
+
+	$update=$settingSave->execute(array(
+		'menu_name' => $_POST['menu_name'],
+		'menu_detail' => $_POST['menu_detail'],
+		'menu_url' => $_POST['menu_url'],
+		'menu_sira' => $_POST['menu_sira'],
+		'menu_seourl' => $menu_seourl,
+		'menu_status' => $_POST['menu_status']
+		));
+
+
+	if ($update) {
+
+		Header("Location:../production/menu-update.php?menu_id=$menu_id&status=ok");
+
+	} else {
+
+		Header("Location:../production/menu-update.php?menu_id=$menu_id&status=no");
+	}
+
+}
+
+//Menu Delete
+if ($_GET['menudelete']=="ok") {
+
+	$delete=$db->prepare("DELETE from menu where menu_id=:id");
+	$control=$delete->execute(array(
+		'id' => $_GET['menu_id']
+		));
+
+
+	if ($control) {
+
+
+		header("location:../production/menu.php?delete=ok");
+
+
+	} else {
+
+		header("location:../production/menu.php?delete=bad");
+
+	}
+
+
+}
+
+//Menu Add
+if (isset($_POST['menuAdd'])) {
+
+
+	$menu_seourl=seo($_POST['menu_name']);
+
+
+	$ayarekle=$db->prepare("INSERT INTO menu SET
+		menu_name=:menu_name,
+		menu_detail=:menu_detail,
+		menu_url=:menu_url,
+		menu_sira=:menu_sira,
+		menu_seourl=:menu_seourl,
+		menu_status=:menu_status
+		");
+
+	$insert=$ayarekle->execute(array(
+		'menu_name' => $_POST['menu_name'],
+		'menu_detail' => $_POST['menu_detail'],
+		'menu_url' => $_POST['menu_url'],
+		'menu_sira' => $_POST['menu_sira'],
+		'menu_seourl' => $menu_seourl,
+		'menu_status' => $_POST['menu_status']
+		));
+
+
+	if ($insert) {
+
+		Header("Location:../production/menu.php?status=ok");
+
+	} else {
+
+		Header("Location:../production/menu.php?status=bad");
+	}
 
 }
 

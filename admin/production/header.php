@@ -99,6 +99,7 @@ if($count==0){
                   </li>
                   <li><a href="about.php"><i class="fa fa-info"></i> Haqqımızda </a></li>
                   <li><a href="user.php"><i class="fa fa-user"></i> İstifadəçilər </a></li>
+                  <li><a href="menu.php"><i class="fa fa-bars"></i> Menyular </a></li>
 
                 </ul>
               </div>
